@@ -7,9 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Una nueva forma de entender las finanzas.">
+    <meta name="description" content="EcoBanco - Finanzas con propósito.">
 
-    <title>Banco | Tu futuro comienza aquí</title>
+    <title>EcoBanco | Finanzas con propósito</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -18,24 +18,33 @@
 
 <body>
 
-    <!-- =========================
-         NAVEGACIÓN
-    ========================== -->
+
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
 
     <header class="navbar">
 
-        <div class="logo">
+        <a href="#inicio" class="brand">
 
-            <span class="logo-symbol">B</span>
+            <div class="brand-leaf">
+                ◢
+            </div>
 
-            <span class="logo-name">
-                BANCO
-            </span>
+            <div>
 
-        </div>
+                <strong>EcoBanco</strong>
+
+                <small>
+                    FINANZAS CON PROPÓSITO
+                </small>
+
+            </div>
+
+        </a>
 
 
-        <nav class="nav-links">
+        <nav>
 
             <a href="#inicio">
                 Inicio
@@ -49,6 +58,10 @@
                 Servicios
             </a>
 
+            <a href="#impacto">
+                Impacto
+            </a>
+
             <a href="#ayuda">
                 Ayuda
             </a>
@@ -56,16 +69,21 @@
         </nav>
 
 
-        <div class="nav-actions">
+        <div class="nav-buttons">
 
-            <button class="btn-login" onclick="openLogin()">
+            <button class="search-button" onclick="openSearch()">
+
+                ⌕
+
+            </button>
+
+            <button class="login-button" onclick="openLogin()">
 
                 Ingresar
 
             </button>
 
-
-            <button class="btn-register" onclick="openRegister()">
+            <button class="register-button" onclick="openRegister()">
 
                 Crear cuenta
 
@@ -73,83 +91,173 @@
 
         </div>
 
+
+        <button class="menu-button" onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
     </header>
 
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+    <div id="mobileMenu" class="mobile-menu">
+
+        <a href="#inicio" onclick="toggleMenu()">
+            Inicio
+        </a>
+
+        <a href="#nosotros" onclick="toggleMenu()">
+            Nosotros
+        </a>
+
+        <a href="#servicios" onclick="toggleMenu()">
+            Servicios
+        </a>
+
+        <a href="#impacto" onclick="toggleMenu()">
+            Impacto
+        </a>
+
+        <a href="#ayuda" onclick="toggleMenu()">
+            Ayuda
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
 
     <main>
 
         <section id="inicio" class="hero">
 
 
+            <div class="hero-overlay"></div>
+
+
             <div class="hero-content">
+
 
                 <span class="eyebrow">
 
-                    BANCA PARA LAS PERSONAS
+                    UN FUTURO MÁS HUMANO
 
                 </span>
 
 
                 <h1>
 
-                    Tu dinero.
+                    Tu dinero también
                     <br>
 
-                    Tus oportunidades.
-                    <br>
+                    puede
 
-                    <span>Tu futuro.</span>
+                    <span>
+                        hacer el bien.
+                    </span>
 
                 </h1>
 
 
                 <p>
 
-                    Estamos construyendo una nueva forma
-                    de relacionarnos con el dinero, donde
-                    las oportunidades financieras puedan
-                    llegar a más personas.
+                    En EcoBanco creemos en un sistema financiero
+                    que impulsa personas, comunidades y un futuro
+                    más sostenible.
 
                 </p>
 
 
                 <div class="hero-buttons">
 
-                    <button class="btn-primary" onclick="openRegister()">
+                    <button class="btn-green" onclick="openRegister()">
 
-                        Quiero ser parte
+                        Abrir mi cuenta
+                        <span>→</span>
 
                     </button>
 
 
-                    <a href="#nosotros" class="btn-outline">
+                    <a href="#nosotros" class="btn-light">
 
-                        Conocer el proyecto
+                        Conoce más
 
                     </a>
 
                 </div>
 
+
+                <div class="hero-stats">
+
+
+                    <div>
+
+                        <strong>
+                            +10.000
+                        </strong>
+
+                        <small>
+                            Personas que confían
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            +300
+                        </strong>
+
+                        <small>
+                            Proyectos apoyados
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            100%
+                        </strong>
+
+                        <small>
+                            Comprometidos
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
             </div>
 
 
 
-            <!-- TARJETA VISUAL -->
+            <!-- TARJETA -->
 
-            <div class="hero-card-container">
+            <div class="card-area">
 
-                <div class="bank-card">
 
-                    <div class="card-top">
+                <div class="eco-card">
 
-                        <span>
-                            BANCO
-                        </span>
+
+                    <div class="card-header">
+
+                        <strong>
+                            EcoBanco
+                        </strong>
 
                         <span>
                             ◉
@@ -158,21 +266,19 @@
                     </div>
 
 
-                    <div class="card-chip">
-
+                    <div class="chip">
                         ▦
-
                     </div>
 
 
                     <div class="card-number">
 
-                        •••• &nbsp; •••• &nbsp; •••• &nbsp; 2048
+                        4123 &nbsp; 5678 &nbsp; 9012 &nbsp; 3456
 
                     </div>
 
 
-                    <div class="card-bottom">
+                    <div class="card-footer">
 
                         <div>
 
@@ -201,10 +307,12 @@
 
                     </div>
 
+
                 </div>
 
 
-                <div class="floating-balance">
+
+                <div class="balance-box">
 
                     <small>
                         Saldo disponible
@@ -215,121 +323,214 @@
                     </strong>
 
                     <span>
-                        ↑ 12.4% este mes
+                        ↗ 12.4% este mes
                     </span>
 
                 </div>
 
+
             </div>
+
 
         </section>
 
 
 
-        <!-- =========================
-             PROPÓSITO
-        ========================== -->
+        <!-- =====================================================
+     PROPÓSITO
+===================================================== -->
 
-        <section id="nosotros" class="purpose">
+        <section id="nosotros" class="purpose-section">
 
 
-            <div class="section-title">
+            <div class="purpose-intro">
 
-                <span>
+                <span class="section-label">
                     NUESTRO PROPÓSITO
                 </span>
 
+
                 <h2>
 
-                    La tecnología debe
-                    <br>
-                    servir a las personas.
+                    Personas que
+                    <span>
+                        hacen la diferencia.
+                    </span>
 
                 </h2>
-
-            </div>
-
-
-            <div class="purpose-text">
-
-                <p>
-
-                    Queremos construir una plataforma
-                    financiera diferente.
-
-                </p>
 
 
                 <p>
 
-                    Una donde las herramientas digitales
-                    sean fáciles de entender y donde las
-                    personas puedan encontrar caminos para
-                    crecer, ahorrar, emprender y construir
-                    un mejor futuro.
+                    Conectamos tus metas financieras con
+                    un impacto positivo en la sociedad
+                    y el medio ambiente.
 
                 </p>
 
-            </div>
 
-        </section>
+                <button class="dark-button">
 
+                    Conoce nuestra historia
+                    →
 
-
-        <!-- =========================
-             SERVICIOS
-        ========================== -->
-
-        <section id="servicios" class="services">
-
-
-            <div class="section-heading">
-
-                <span>
-                    LO QUE ESTAMOS CONSTRUYENDO
-                </span>
-
-                <h2>
-                    Mucho más que una cuenta.
-                </h2>
+                </button>
 
             </div>
 
 
-            <div class="services-grid">
+
+            <div class="purpose-cards">
 
 
-                <article class="service-card">
+                <article class="purpose-card">
 
-                    <div class="service-number">
-                        01
+                    <div class="purpose-image" style="background-image:
+                url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80');">
                     </div>
 
-                    <div class="service-icon">
-                        $
+
+                    <div class="purpose-icon">
+                        ♧
                     </div>
+
 
                     <h3>
-                        Cuenta
+                        Personas
                     </h3>
 
+
                     <p>
-
-                        Una cuenta sencilla para
-                        administrar tu dinero y
-                        consultar tus movimientos.
-
+                        Impulsamos el bienestar
+                        y el de tu familia.
                     </p>
 
                 </article>
 
 
 
-                <article class="service-card">
+                <article class="purpose-card">
 
-                    <div class="service-number">
-                        02
+                    <div class="purpose-image" style="background-image:
+                url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80');">
                     </div>
+
+
+                    <div class="purpose-icon">
+                        ♧
+                    </div>
+
+
+                    <h3>
+                        Comunidades
+                    </h3>
+
+
+                    <p>
+                        Apoyamos proyectos locales
+                        y emprendimientos.
+                    </p>
+
+                </article>
+
+
+
+                <article class="purpose-card">
+
+                    <div class="purpose-image" style="background-image:
+                url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80');">
+                    </div>
+
+
+                    <div class="purpose-icon">
+                        ◉
+                    </div>
+
+
+                    <h3>
+                        Planeta
+                    </h3>
+
+
+                    <p>
+                        Invertimos en un futuro
+                        más sostenible.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     SERVICIOS
+===================================================== -->
+
+        <section id="servicios" class="services-section">
+
+
+            <div class="services-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        NUESTROS SERVICIOS
+                    </span>
+
+
+                    <h2>
+
+                        Mucho más
+                        <span>
+                            que un banco.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Soluciones financieras simples,
+                        seguras y con propósito.
+                    </p>
+
+                </div>
+
+
+                <a href="#servicios">
+                    Ver todos los servicios →
+                </a>
+
+            </div>
+
+
+
+            <div class="services-grid">
+
+
+                <article class="service">
+
+                    <div class="service-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        Cuentas
+                    </h3>
+
+                    <p>
+                        Administra tu dinero
+                        fácilmente.
+                    </p>
+
+                </article>
+
+
+
+                <article class="service">
 
                     <div class="service-icon">
                         ↗
@@ -340,24 +541,18 @@
                     </h3>
 
                     <p>
-
-                        Envía y recibe dinero de
-                        manera sencilla y transparente.
-
+                        Envía y recibe dinero
+                        de forma segura.
                     </p>
 
                 </article>
 
 
 
-                <article class="service-card">
-
-                    <div class="service-number">
-                        03
-                    </div>
+                <article class="service">
 
                     <div class="service-icon">
-                        +
+                        ♧
                     </div>
 
                     <h3>
@@ -365,39 +560,69 @@
                     </h3>
 
                     <p>
-
-                        Herramientas para ayudarte
-                        a construir hábitos financieros.
-
+                        Construye tus metas
+                        paso a paso.
                     </p>
 
                 </article>
 
 
 
-                <article class="service-card">
-
-                    <div class="service-number">
-                        04
-                    </div>
+                <article class="service">
 
                     <div class="service-icon">
-                        ♡
+                        ↗
                     </div>
 
                     <h3>
-                        Oportunidades
+                        Créditos
                     </h3>
 
                     <p>
-
-                        Diseñaremos mecanismos para
-                        apoyar personas y proyectos
-                        que necesiten una oportunidad.
-
+                        Oportunidades reales
+                        para tus proyectos.
                     </p>
 
                 </article>
+
+
+
+                <article class="service">
+
+                    <div class="service-icon">
+                        ▤
+                    </div>
+
+                    <h3>
+                        Educación financiera
+                    </h3>
+
+                    <p>
+                        Aprende hoy para
+                        construir un mejor mañana.
+                    </p>
+
+                </article>
+
+
+
+                <article class="service">
+
+                    <div class="service-icon">
+                        ♥
+                    </div>
+
+                    <h3>
+                        Impacto social
+                    </h3>
+
+                    <p>
+                        Apoyamos iniciativas
+                        que generan cambio.
+                    </p>
+
+                </article>
+
 
             </div>
 
@@ -405,24 +630,183 @@
 
 
 
-        <!-- =========================
-             AYUDA
-        ========================== -->
+        <!-- =====================================================
+     IMPACTO
+===================================================== -->
+
+        <section id="impacto" class="impact-section">
+
+
+            <div class="impact-image">
+
+                <div class="plant">
+
+                    🌱
+
+                </div>
+
+            </div>
+
+
+            <div class="impact-content">
+
+                <span class="section-label">
+                    JUNTOS PODEMOS MÁS
+                </span>
+
+
+                <h2>
+
+                    Inversiones que
+                    <span>
+                        siembran futuro.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Parte de nuestros productos financieros
+                    buscarán apoyar proyectos ambientales,
+                    sociales y productivos.
+
+                </p>
+
+
+                <button class="btn-green" onclick="openRegister()">
+
+                    Quiero ser parte
+                    →
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+     VALORES
+===================================================== -->
+
+        <section class="values-section">
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    ♢
+                </div>
+
+                <div>
+
+                    <strong>
+                        Seguridad
+                    </strong>
+
+                    <p>
+                        Tus datos siempre protegidos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <strong>
+                        Transparencia
+                    </strong>
+
+                    <p>
+                        Información clara y sin sorpresas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    ♥
+                </div>
+
+                <div>
+
+                    <strong>
+                        Compromiso
+                    </strong>
+
+                    <p>
+                        Con las personas y el planeta.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    ◉
+                </div>
+
+                <div>
+
+                    <strong>
+                        Cercanía
+                    </strong>
+
+                    <p>
+                        Siempre aquí para ti.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+     AYUDA
+===================================================== -->
 
         <section id="ayuda" class="help-section">
 
 
-            <div class="help-content">
+            <div>
 
-                <span>
+                <span class="section-label">
                     FINANZAS CON PROPÓSITO
                 </span>
 
 
                 <h2>
 
-                    Queremos que el
-                    dinero abra puertas,
+                    Queremos que el dinero
+                    <span>
+                        abra puertas,
+                    </span>
+
                     no que las cierre.
 
                 </h2>
@@ -430,21 +814,22 @@
 
                 <p>
 
-                    Estamos trabajando en un modelo donde
-                    la educación financiera, el ahorro y las
-                    oportunidades puedan formar parte de una
-                    misma experiencia.
+                    Estamos construyendo herramientas
+                    financieras pensadas para personas,
+                    familias, emprendedores y comunidades.
 
                 </p>
 
 
-                <button class="btn-primary" onclick="openRegister()">
+                <button class="dark-button" onclick="openRegister()">
 
-                    Conocer más
+                    Quiero conocer EcoBanco
+                    →
 
                 </button>
 
             </div>
+
 
         </section>
 
@@ -452,37 +837,66 @@
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
 
     <footer>
 
-        <div class="footer-logo">
 
-            <span class="logo-symbol">
-                B
-            </span>
+        <div class="footer-brand">
 
-            <span>
-                BANCO
-            </span>
+            <div class="footer-logo">
+                ◢
+            </div>
+
+
+            <div>
+
+                <strong>
+                    EcoBanco
+                </strong>
+
+                <small>
+                    FINANZAS CON PROPÓSITO
+                </small>
+
+            </div>
 
         </div>
 
 
-        <p>
 
-            Construyendo oportunidades
-            financieras.
+        <div class="footer-column">
 
-        </p>
+            <a href="#nosotros">
+                Nosotros
+            </a>
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#impacto">
+                Impacto
+            </a>
+
+            <a href="#ayuda">
+                Ayuda
+            </a>
+
+        </div>
 
 
-        <div class="footer-links">
+
+        <div class="footer-column">
 
             <a href="#">
                 Privacidad
+            </a>
+
+            <a href="#">
+                Términos
             </a>
 
             <a href="#">
@@ -496,34 +910,62 @@
         </div>
 
 
-        <div class="copyright">
 
-            © 2026 Banco.
-            Todos los derechos reservados.
+        <div class="footer-social">
+
+            <span>
+                Instagram
+            </span>
+
+            <span>
+                Facebook
+            </span>
+
+            <span>
+                YouTube
+            </span>
+
+            <span>
+                LinkedIn
+            </span>
 
         </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 EcoBanco.
+            Todos los derechos reservados.
+
+            <span>
+                Construyendo un mañana mejor.
+            </span>
+
+        </div>
+
 
     </footer>
 
 
 
-    <!-- =========================
-         MODAL LOGIN
-    ========================== -->
+    <!-- =====================================================
+     MODAL LOGIN
+===================================================== -->
 
     <div id="loginModal" class="modal">
 
 
         <div class="modal-box">
 
-            <button class="close-modal" onclick="closeModals()">
+
+            <button class="close" onclick="closeModals()">
 
                 ×
 
             </button>
 
 
-            <span class="modal-label">
+            <span class="section-label">
                 ACCESO
             </span>
 
@@ -534,15 +976,17 @@
 
 
             <p>
-                Ingresa a tu cuenta.
+                Ingresa a tu cuenta EcoBanco.
             </p>
 
 
-            <form>
+            <form onsubmit="fakeLogin(event)">
+
 
                 <label>
                     Correo electrónico
                 </label>
+
 
                 <input type="email" placeholder="correo@ejemplo.com" required>
 
@@ -551,29 +995,30 @@
                     Contraseña
                 </label>
 
+
                 <input type="password" placeholder="••••••••" required>
 
 
-                <button type="submit" class="btn-primary full">
+                <button class="btn-green full">
 
                     Ingresar
 
                 </button>
 
+
             </form>
 
 
-            <p class="modal-bottom">
+            <div class="modal-link">
 
                 ¿No tienes cuenta?
 
-                <button onclick="switchToRegister()">
-
+                <button onclick="switchRegister()">
                     Crear cuenta
-
                 </button>
 
-            </p>
+            </div>
+
 
         </div>
 
@@ -581,24 +1026,25 @@
 
 
 
-    <!-- =========================
-         MODAL REGISTRO
-    ========================== -->
+    <!-- =====================================================
+     MODAL REGISTRO
+===================================================== -->
 
     <div id="registerModal" class="modal">
 
 
         <div class="modal-box">
 
-            <button class="close-modal" onclick="closeModals()">
+
+            <button class="close" onclick="closeModals()">
 
                 ×
 
             </button>
 
 
-            <span class="modal-label">
-                NUEVO USUARIO
+            <span class="section-label">
+                ECOBANCO
             </span>
 
 
@@ -608,15 +1054,18 @@
 
 
             <p>
-                Empieza a construir tu futuro financiero.
+                Sé parte de una nueva forma
+                de entender las finanzas.
             </p>
 
 
-            <form>
+            <form onsubmit="fakeRegister(event)">
+
 
                 <label>
                     Nombre completo
                 </label>
+
 
                 <input type="text" placeholder="Tu nombre" required>
 
@@ -625,6 +1074,7 @@
                     Correo electrónico
                 </label>
 
+
                 <input type="email" placeholder="correo@ejemplo.com" required>
 
 
@@ -632,29 +1082,30 @@
                     Contraseña
                 </label>
 
+
                 <input type="password" placeholder="Crea una contraseña" required>
 
 
-                <button type="submit" class="btn-primary full">
+                <button class="btn-green full">
 
                     Crear cuenta
 
                 </button>
 
+
             </form>
 
 
-            <p class="modal-bottom">
+            <div class="modal-link">
 
                 ¿Ya tienes cuenta?
 
-                <button onclick="switchToLogin()">
-
+                <button onclick="switchLogin()">
                     Ingresar
-
                 </button>
 
-            </p>
+            </div>
+
 
         </div>
 
@@ -662,13 +1113,52 @@
 
 
 
-    <!-- =========================
-         JAVASCRIPT TEMPORAL
-    ========================== -->
+    <!-- =====================================================
+     SEARCH
+===================================================== -->
+
+    <div id="searchModal" class="modal">
+
+
+        <div class="modal-box search-box">
+
+
+            <button class="close" onclick="closeModals()">
+
+                ×
+
+            </button>
+
+
+            <span class="section-label">
+                BUSCAR
+            </span>
+
+
+            <h2>
+                ¿Qué estás buscando?
+            </h2>
+
+
+            <input class="search-input" type="text" placeholder="Buscar en EcoBanco...">
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
     <script>
 
+
         function openLogin() {
+
+            closeModals();
 
             document
                 .getElementById("loginModal")
@@ -679,8 +1169,21 @@
 
         function openRegister() {
 
+            closeModals();
+
             document
                 .getElementById("registerModal")
+                .classList.add("active");
+
+        }
+
+
+        function openSearch() {
+
+            closeModals();
+
+            document
+                .getElementById("searchModal")
                 .classList.add("active");
 
         }
@@ -689,30 +1192,57 @@
         function closeModals() {
 
             document
-                .getElementById("loginModal")
-                .classList.remove("active");
+                .querySelectorAll(".modal")
+                .forEach(function (modal) {
 
-            document
-                .getElementById("registerModal")
-                .classList.remove("active");
+                    modal.classList.remove("active");
+
+                });
 
         }
 
 
-        function switchToRegister() {
-
-            closeModals();
+        function switchRegister() {
 
             openRegister();
 
         }
 
 
-        function switchToLogin() {
-
-            closeModals();
+        function switchLogin() {
 
             openLogin();
+
+        }
+
+
+        function toggleMenu() {
+
+            document
+                .getElementById("mobileMenu")
+                .classList.toggle("active");
+
+        }
+
+
+        function fakeLogin(event) {
+
+            event.preventDefault();
+
+            alert(
+                "La autenticación real será conectada posteriormente."
+            );
+
+        }
+
+
+        function fakeRegister(event) {
+
+            event.preventDefault();
+
+            alert(
+                "El sistema de registro será conectado posteriormente."
+            );
 
         }
 
@@ -727,7 +1257,8 @@
 
             }
 
-        }
+        };
+
 
     </script>
 
