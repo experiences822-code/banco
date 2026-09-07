@@ -1,0 +1,1122 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f5f2;
+
+    color: #151515;
+
+    line-height: 1.5;
+
+}
+
+
+button,
+input {
+
+    font-family: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(245, 245, 242, .95);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+}
+
+
+.logo-symbol {
+
+    width: 34px;
+
+    height: 34px;
+
+    border: 1px solid #111;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+    font-size: 14px;
+
+}
+
+
+.nav-links a {
+
+    transition: .2s;
+
+}
+
+
+.nav-links a:hover {
+
+    opacity: .5;
+
+}
+
+
+.nav-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.btn-login,
+.btn-register,
+.btn-primary,
+.btn-outline {
+
+    border-radius: 7px;
+
+    padding: 13px 22px;
+
+    border: none;
+
+    font-size: 14px;
+
+    transition: .2s;
+
+}
+
+
+.btn-login {
+
+    background: transparent;
+
+}
+
+
+.btn-register {
+
+    background: #151515;
+
+    color: white;
+
+}
+
+
+.btn-primary {
+
+    background: #151515;
+
+    color: white;
+
+}
+
+
+.btn-outline {
+
+    border: 1px solid #777;
+
+    background: transparent;
+
+    display: inline-flex;
+
+    align-items: center;
+
+}
+
+
+.btn-primary:hover,
+.btn-register:hover {
+
+    transform: translateY(-2px);
+
+    opacity: .85;
+
+}
+
+
+.btn-outline:hover {
+
+    background: #151515;
+
+    color: white;
+
+}
+
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    min-height: 720px;
+
+    padding: 100px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: #f5f5f2;
+
+}
+
+
+.hero-content {
+
+    max-width: 700px;
+
+}
+
+
+.eyebrow {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    opacity: .5;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(50px, 6vw, 88px);
+
+    line-height: .95;
+
+    letter-spacing: -4px;
+
+    margin: 25px 0;
+
+}
+
+
+.hero h1 span {
+
+    font-weight: 400;
+
+    opacity: .55;
+
+}
+
+
+.hero p {
+
+    max-width: 580px;
+
+    font-size: 18px;
+
+    color: #555;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+
+/* =====================================
+   TARJETA
+===================================== */
+
+.hero-card-container {
+
+    position: relative;
+
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.bank-card {
+
+    width: 390px;
+
+    height: 245px;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    background: #171717;
+
+    color: white;
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, .25);
+
+    transform: rotate(-5deg);
+
+}
+
+
+.card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.card-chip {
+
+    margin-top: 45px;
+
+    font-size: 32px;
+
+}
+
+
+.card-number {
+
+    margin-top: 15px;
+
+    letter-spacing: 3px;
+
+    font-size: 15px;
+
+}
+
+
+.card-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+}
+
+
+.card-bottom div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.card-bottom small {
+
+    font-size: 8px;
+
+    opacity: .5;
+
+}
+
+
+.card-bottom strong {
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+.floating-balance {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 20px;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.floating-balance small {
+
+    color: #777;
+
+}
+
+
+.floating-balance strong {
+
+    font-size: 23px;
+
+}
+
+
+.floating-balance span {
+
+    font-size: 12px;
+
+    opacity: .6;
+
+}
+
+
+
+/* =====================================
+   PROPÓSITO
+===================================== */
+
+.purpose {
+
+    padding: 130px 10%;
+
+    background: #111;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+}
+
+
+.section-title span,
+.section-heading span,
+.help-content>span {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    opacity: .5;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    margin-top: 25px;
+
+}
+
+
+.purpose-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+
+.purpose-text p {
+
+    font-size: 20px;
+
+    color: #bbb;
+
+}
+
+
+
+/* =====================================
+   SERVICIOS
+===================================== */
+
+.services {
+
+    padding: 120px 8%;
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 60px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 55px;
+
+    margin-top: 20px;
+
+    letter-spacing: -2px;
+
+}
+
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.service-card {
+
+    background: white;
+
+    min-height: 330px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    transition: .25s;
+
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .08);
+
+}
+
+
+.service-number {
+
+    font-size: 11px;
+
+    opacity: .4;
+
+}
+
+
+.service-icon {
+
+    margin-top: 45px;
+
+    font-size: 40px;
+
+}
+
+
+.service-card h3 {
+
+    margin-top: 25px;
+
+    font-size: 23px;
+
+}
+
+
+.service-card p {
+
+    margin-top: 12px;
+
+    color: #666;
+
+}
+
+
+
+/* =====================================
+   AYUDA
+===================================== */
+
+.help-section {
+
+    min-height: 550px;
+
+    background: #deded8;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 100px 10%;
+
+}
+
+
+.help-content {
+
+    max-width: 700px;
+
+}
+
+
+.help-content h2 {
+
+    font-size: 65px;
+
+    line-height: .95;
+
+    letter-spacing: -3px;
+
+    margin: 25px 0;
+
+}
+
+
+.help-content p {
+
+    max-width: 600px;
+
+    font-size: 18px;
+
+    color: #555;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    background: #111;
+
+    color: white;
+
+    padding: 60px 8%;
+
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+}
+
+
+footer p {
+
+    margin-top: 20px;
+
+    color: #888;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    font-size: 13px;
+
+    color: #aaa;
+
+}
+
+
+.copyright {
+
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #333;
+
+    color: #666;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =====================================
+   MODALES
+===================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .65);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 3000;
+
+    padding: 20px;
+
+}
+
+
+.modal.active {
+
+    display: flex;
+
+}
+
+
+.modal-box {
+
+    background: #f5f5f2;
+
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 45px;
+
+    border-radius: 18px;
+
+    position: relative;
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+}
+
+
+.modal-label {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    opacity: .5;
+
+}
+
+
+.modal-box h2 {
+
+    font-size: 40px;
+
+    margin-top: 15px;
+
+}
+
+
+.modal-box>p {
+
+    color: #666;
+
+    margin-bottom: 25px;
+
+}
+
+
+.modal-box form {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.modal-box label {
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+}
+
+
+.modal-box input {
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    background: white;
+
+    outline: none;
+
+}
+
+
+.modal-box input:focus {
+
+    border-color: #111;
+
+}
+
+
+.full {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+}
+
+
+.modal-bottom {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+}
+
+
+.modal-bottom button {
+
+    border: none;
+
+    background: none;
+
+    text-decoration: underline;
+
+}
+
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 70px;
+
+    }
+
+
+    .hero-card-container {
+
+        min-height: 330px;
+
+    }
+
+
+    .purpose {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav-actions {
+
+        gap: 4px;
+
+    }
+
+
+    .btn-login,
+    .btn-register {
+
+        padding: 10px 12px;
+
+        font-size: 12px;
+
+    }
+
+
+    .hero {
+
+        padding:
+            70px 25px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .bank-card {
+
+        width: 320px;
+
+        height: 205px;
+
+    }
+
+
+    .floating-balance {
+
+        right: 0;
+
+        bottom: 0;
+
+    }
+
+
+    .purpose {
+
+        padding:
+            90px 25px;
+
+    }
+
+
+    .section-title h2,
+    .section-heading h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .services {
+
+        padding:
+            90px 25px;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .help-section {
+
+        padding:
+            90px 25px;
+
+    }
+
+
+    .help-content h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    footer {
+
+        padding:
+            50px 25px;
+
+    }
+
+}
